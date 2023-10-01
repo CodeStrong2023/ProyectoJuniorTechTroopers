@@ -4,8 +4,8 @@
 # <div align="center">COHORTE 2023</div>
 
 ---
-
 ![PNG NOMBRES-LEGAJOS](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/22755ee9-17a4-474e-9137-907880db77c8)
+
 
 ---
 
