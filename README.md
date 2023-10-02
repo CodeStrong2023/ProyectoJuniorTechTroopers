@@ -1,5 +1,5 @@
 ### 
-# <div align="center">Proyecto INTEGRADOR JAVA **>>JUNIOR TECH TROOPERS<<**</div>
+# <div align="center">Proyecto INTEGRADOR JAVA **>JUNIOR TECH TROOPERS<**</div>
 
 # <div align="center">COHORTE 2023</div>
 
