@@ -39,7 +39,7 @@ La aplicación utiliza una base de datos MySQL para almacenar la información de
 
 ### REQUISITOS
 
-Lenguaje: ***JAVA***
+Lenguaje:  ***JAVA***
 
 Aplicación: ***Desktop***
 
@@ -120,7 +120,7 @@ Lo realizamos con el asistente de workbench.
     
     ### Campos:
 
-  ![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/1c6ac981-2c98-4f37-a9a1-563bdf8ee31d)
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/1c6ac981-2c98-4f37-a9a1-563bdf8ee31d)
 
 ### Creando las tablas (ingresamos llaves primarias y foraneas)
 
@@ -162,6 +162,39 @@ Para que esta API funcione es necesaria insertar una librería con los drivers.
 ![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/73d80441-f441-403f-a1ae-26b7d5773068)
 
 ---
+
+### QUERYS NECESARIAS PARA EL FUNCIONAMIENTO:
+
+***Registro***
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/56b55e39-a85e-44df-a78e-6a7621711e35)
+
+
+***Login y Cerrar sesión***
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/8add632f-d2aa-4ca7-ba7a-4b9ba4d3c6c3)
+
+***Cargar Hospedaje***
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/09dc97e7-78d2-4fd1-86ef-480e3eb61e07)
+
+***Actualizar Información***
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/b1158c55-3129-4cf8-be02-55deec5735b4)
+
+***Borrar Información***
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/d6f0b70b-687b-4a98-ba34-44f4da7f4f8f)
+
+***Filtro***
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/69e2ac0b-1913-4bfd-8f66-6566a272d1bc)
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/19ee0f85-3ea0-4a62-9607-d493c891d065)
+
+***Alquilar Hospedaje***
+
+![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/aa87b783-8b10-4df8-9702-f9830c8d5b5a)
 
 
 
