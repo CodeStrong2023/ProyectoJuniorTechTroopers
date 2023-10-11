@@ -22,21 +22,25 @@ USE `trooper_stay`;
 -- Volcando estructura para tabla trooper_stay.hospedajes
 CREATE TABLE IF NOT EXISTS `hospedajes` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
   `tipo` int DEFAULT NULL,
   `capacidad` int DEFAULT NULL,
-  `localizacion` varchar(50) DEFAULT NULL,
+  `localizacion` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `precio_por_noche` float DEFAULT NULL,
-  `estado` binary(10) DEFAULT NULL,
+  `estado` bit(1) DEFAULT NULL,
   `id_usuario` int DEFAULT NULL,
   `id_usuario_inquilino` int DEFAULT NULL,
   `estadia` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Volcando datos para la tabla trooper_stay.hospedajes: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla trooper_stay.hospedajes: ~6 rows (aproximadamente)
+INSERT INTO `hospedajes` (`id`, `nombre`, `tipo`, `capacidad`, `localizacion`, `precio_por_noche`, `estado`, `id_usuario`, `id_usuario_inquilino`, `estadia`) VALUES
+	(10, 'Mendoza', 1, 5, 'Mendoza', 1000, b'0', 1, NULL, NULL),
+	(11, 'Departamento', 1, 4, 'Mendoza', 2000, b'0', 1, NULL, NULL),
+	(12, 'Casa', 1, 3, 'Mendoza', 3000, b'0', 1, NULL, NULL);
 
 -- Volcando estructura para tabla trooper_stay.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
@@ -51,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Volcando datos para la tabla trooper_stay.usuarios: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla trooper_stay.usuarios: ~4 rows (aproximadamente)
 INSERT INTO `usuarios` (`id`, `nombre_de_usuario`, `contrasenia`, `correo`, `edad`, `nombre`, `apellido`, `saldo`) VALUES
 	(1, 'Roberto30', '1234', 'roberto5@gmail.com', 45, 'Roberto', 'Figurea', 100000),
 	(2, 'Facundo', '1234', 'corre@.com', 43, 'Facundo', 'Garlopa', 1000000),
@@ -62,3 +66,4 @@ INSERT INTO `usuarios` (`id`, `nombre_de_usuario`, `contrasenia`, `correo`, `eda
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+hospedajes
