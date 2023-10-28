@@ -1,0 +1,3 @@
+DB_URL=jdbc:mysql://localhost:3306/trooper_stay
+DB_USERNAME=root
+DB_PASSWORD=PASSWORD
