@@ -9,16 +9,14 @@ public class Usuario {
     public String nombre;
     public String apellido;
     public double saldo;
+    public Usuario() {
+    }
 
-    public Usuario(int id, String nombre_de_usuario, String contrasenia, String correo, int edad, String nombre, String apellido, double saldo) {
+    public Usuario(int id, String nombre_de_usuario, double saldo) {
         this.id = id;
         this.nombre_de_usuario = nombre_de_usuario;
-        this.contrasenia = contrasenia;
-        this.correo = correo;
-        this.edad = edad;
-        this.nombre = nombre;
-        this.apellido = apellido;
         this.saldo = saldo;
-    }    
-    
+    }
+
 }
+
