@@ -83,7 +83,6 @@ public class VerHospedajes extends JPanel {
 
             switch (opcion) {
                 case 0:
-                    JOptionPane.showMessageDialog(null, "Su alquiler por " + diasHospedaje +" tiene un monto final de $" +montoFinal );
                     break;
                 default:
                     // Cualquier otra opcion sale
@@ -105,10 +104,12 @@ public class VerHospedajes extends JPanel {
 
             } else {
                 JOptionPane.showMessageDialog(null, "POBRE DE MIERDA");
+                salir = true; 
+                return; 
             }
-
+            if (salir == false){
             JOptionPane.showMessageDialog(null, "Que disfrute de su estadia!! :)");
-
+            }
             // Lo instanciamos para que no de problemas de recursividad
             Panel panel = new Panel();
             obtenerInformacion.obtenerObjetoPanel(usuario.id);
