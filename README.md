@@ -1,203 +1,66 @@
-### 
-# <div align="center">Proyecto INTEGRADOR JAVA **>JUNIOR TECH TROOPERS<**</div>
 
-# <div align="center">COHORTE 2023</div>
 
----
-![PNG NOMBRES-LEGAJOS](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/22755ee9-17a4-474e-9137-907880db77c8)
 
-
----
-
- **IDEA:**
-
- ***Sistema de estadía (Troopers Stay)***
-
-  <div align="center">En esta aplicación se podrán publicar alojamientos con sus respectivas características. Estos alojamientos se almacenaran en una base de datos, 
-permitiendo así mostrar estos y que los usuarios puedan hacer uso del servicio.
-El usuario podrá iniciar sesión y registrarse en caso de no tener credenciales. Tendrá ambos roles, es decir, podrá tanto publicar nuevos alojamientos como también contratar el servicio. 
-Estos alojamientos tendrán un tipo, fecha de estadia, localización y capacidad. Los alojamientos se vincularan a los usuarios mediante la base de datos.
-
-</div>
-
-
----
-
-***Troopers Stay - Sistema de Gestión de Alojamientos:***
-
-***Descripción del Proyecto***
-
-
-
- <div align="center">Troopers Stay es una aplicación Java que permite a los usuarios publicar y buscar alojamientos para estancias temporales. Los usuarios pueden registrarse, iniciar sesión y tener roles duales: publicar alojamientos o contratar servicios de alojamiento. 
-La aplicación utiliza una base de datos MySQL para almacenar la información de los alojamientos y los usuarios
-   
-</div>
-
-
----
-
-### REQUISITOS
-
-Lenguaje:  ***JAVA***
-
-Aplicación: ***Desktop***
-
-Base de datos: ***MySQL// SQlite no requiere de conexión a internet***
-
-Software: ***Net Beans***
-
----
-
-### TABLAS
-
-  ***Filtro*** (De acuerdo a los valores que ingres el usuario se mostrará los alojamientos)
-
-   ***Usuarios***
-
----
-
-### Estructura
-
-**El proyecto se basa en dos objetos:**
-
-  ***Persona***
- ***Alojamientos***
-
- -    **LOGIN ⇒ PARTE DEL OBJETO PERSONA**
-
- **¿Qué puede hacer?**
-    
-  ***Ingresar***
-    
-***Registrarse***
-    
-  ***Verificación (Lo último)***
-
- - **ALOJAMIENTO CRUD => (CREAR LEER ACTUALIZAR Y ELIMINAR)**
-  
-   ***Carga de alojamientos***
-  
-   ***Filtros***
-  
-   ***Ver los alojamientos***
-  
-   ***Contratar***
-  
-   ***Carro***
-
-  ![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/7b1ce4ca-20b3-430e-91c7-ceb4e57d1ea7)
-
-  ---
-
- ### BASE DE DATOS
- 
-**Base de datos nombre: Trooper_Stay**
-
-Primeramente deberemos identificar la estructura, los tipos de datos y determinar las llaves primarias y foraneas.
-
-Creamos la base de datos
-
-Lo realizamos con el asistente de workbench.
-
-### En código se vería así: 
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/30c512ef-fcae-4b39-b3ec-2d89f9c0df2a)
-
-### Cantidad tablas: 2
-
-- **Tabla 1: usuarios**
-
-### Campos:
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/5d9a88c0-bd92-4f86-a2e7-420a143f3ec4)
-
-### Ingresando registros a nuestra tabla como prueba
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/8fa1e52e-a2ea-4d5e-8746-099b211552c1)
-
-- **Tabla 2: hospedaje**
-    
-    ### Campos:
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/1c6ac981-2c98-4f37-a9a1-563bdf8ee31d)
-
-### Creando las tablas (ingresamos llaves primarias y foraneas)
-
-***¿Qué son las llaves primarias y foráneas?***
-
-**Clave primaria:** Son valores que identifican de manera única a cada fila o registro de una tabla, esto
-quiere decir que ***no se pueden repetir*** . Por ejemplo: DNI, código de producto, etc.
-
-**Clave foránea:** Es un campo de un tabla “X” que sirve para enlazar o relacionar entre sí con otra tabla
-“Y” en la cual el campo de esta tabla es una llave primaria. Para que sea una clave foránea un campo,
-esta tiene que ser una ***llave primaria en otra tabla.***
-
-En este paso es importante que tanto el ***id_usuario*** y el ***id_alojamiento*** sean llaves primarias (esto debido a
-que deben ser UNICOS para poder filtrar la información más adelante).
-
-Estos id seran **auto incrementales** para que sus valores se asignen solos a medida que se crean nuevos
-registros.
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/141f9bac-6d86-4a0c-b188-73435ce16d56)
-
-**¿Por qué definir el id_usuario como llave foranea en la tabla hospedajes?**
-
-Porque es el dato que nos va a permitir relacionar ambas tablas , con este id podremos identificar qué
-persona ingresa datos.
-
----
-
-### BACKEND
-
-Como primer instancia debemos establecer la conexión con la base de datos. Para ello requerimos de JDBC, es
-necesario para conectar una base de datos MySQL a un backend en Java. La misma es una la API de JDBC
-(Java Database Connectivity). JDBC proporciona una forma estándar de interactuar con bases de datos desde
-aplicaciones Java. 
-
-Para que esta API funcione es necesaria insertar una librería con los drivers.
-
-**Estableciento la conexión con la base de datos:**
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/73d80441-f441-403f-a1ae-26b7d5773068)
-
----
-
-### QUERYS NECESARIAS PARA EL FUNCIONAMIENTO:
-
-***Registro***
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/56b55e39-a85e-44df-a78e-6a7621711e35)
-
-
-***Login y Cerrar sesión***
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/8add632f-d2aa-4ca7-ba7a-4b9ba4d3c6c3)
-
-***Cargar Hospedaje***
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/09dc97e7-78d2-4fd1-86ef-480e3eb61e07)
-
-***Actualizar Información***
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/b1158c55-3129-4cf8-be02-55deec5735b4)
-
-***Borrar Información***
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/d6f0b70b-687b-4a98-ba34-44f4da7f4f8f)
-
-***Filtro***
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/69e2ac0b-1913-4bfd-8f66-6566a272d1bc)
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/19ee0f85-3ea0-4a62-9607-d493c891d065)
-
-***Alquilar Hospedaje***
-
-![image](https://github.com/CodeStrong2023/ProyectoJuniorTechTroopers/assets/135768183/aa87b783-8b10-4df8-9702-f9830c8d5b5a)
-
-
-
+<h1>Troopers Stay - Sistema de Gestión de Alojamientos</h1>
+
+<p>Troopers Stay es una aplicación Java que permite a los usuarios publicar y buscar alojamientos para estancias temporales. Los usuarios pueden registrarse, iniciar sesión y tener roles duales: publicar alojamientos o contratar servicios de alojamiento. La aplicación utiliza una base de datos MySQL para almacenar la información de los alojamientos y los usuarios.</p>
+
+<h2>Tecnologías utilizadas</h2>
+ <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img
+  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"
+  width="40" height="40" /> </a>
+   <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img
+    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+    alt="mysql" width="40" height="40" /> </a>
+
+<h2>Guía de Instalación</h2>
+
+<h3>Requisitos Previos</h3>
+
+<p>Asegúrate de tener los siguientes requisitos previos instalados en tu sistema:</p>
+
+<ul>
+    <li><a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> y <a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench 8.0</a></li>
+    <li><a href="https://www.oracle.com/java/technologies/javase-jdk18-downloads.html">Java JDK</a> versión 18</li>
+</ul>
+
+<h3>Pasos de Instalación</h3>
+
+<ol>
+    <li><strong>Clonar el Repositorio:</strong></li>
+    <pre>
+        <code>git clone https://github.com/tu-usuario/troopers-stay.git
+        cd troopers-stay</code>
+    </pre>
+    <li><strong>Configurar la Base de Datos:</strong></li>
+    <p>En la carpeta "BASE DE DATOS JTT", encontrarás un archivo llamado "database.properties-example". Edita este archivo para proporcionar la información de tu base de datos. Luego, renombra el archivo a "database.properties" y asegúrate de reemplazar las siguientes credenciales con las tuyas:</p>
+    <pre>
+        <code>DB_URL=jdbc:mysql://localhost:3306/trooper_stay
+        DB_USERNAME=tu_usuario_mysql
+        DB_PASSWORD=tu_contraseña</code>
+    </pre>
+    <li><strong>Inicializar la Base de Datos:</strong></li>
+    <p>Abre MySQL Workbench y ejecuta el script "trooper_stay.sql" que se encuentra en la carpeta "BASE DE DATOS JTT". Esto creará la estructura de la base de datos necesaria para el funcionamiento de Troopers Stay.</p>
+    <li><strong>Compilar y Ejecutar el Programa:</strong></li>
+    <p>Compila el código fuente Java utilizando el siguiente comando desde la raíz del proyecto:</p>
+    <pre>
+        <code>javac -classpath .:./lib/* TroopersStayMain.java</code>
+    </pre>
+    <p>Ejecuta el programa con el siguiente comando:</p>
+    <pre>
+        <code>java -classpath .:./lib/* TroopersStayMain</code>
+    </pre>
+    <li><strong>Acceder al Sistema:</strong></li>
+    <p>Abre tu navegador web y accede a "http://localhost:puerto-del-servidor" para utilizar Troopers Stay.</p>
+</ol>
+
+<h3>Problemas Comunes y Soluciones</h3>
+
+<p><strong>Problema:</strong> No se puede conectar a la base de datos.</p>
+<p><strong>Solución:</strong> Asegúrate de que las credenciales en "database.properties" sean correctas y de que MySQL esté en ejecución.</p>
+
+<p><strong>Problema:</strong> Error durante la ejecución del script SQL.</p>
+<p><strong>Solución:</strong> Verifica el script "trooper_stay.sql" para asegurarte de que no haya errores de sintaxis y de que esté apuntando a la base de datos correcta.</p>
 
 
 
