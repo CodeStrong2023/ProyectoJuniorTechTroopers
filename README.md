@@ -4,6 +4,10 @@
 <h1>PROYECTO INTEGRADOR</h1>
 <h2>Troopers Stay - Sistema de Gestión de Alojamientos</h2>
 
+<h2>link de Notion completo:  https://www.notion.so/Proyecto-INTEGRADOR-JAVA-4b34ee2ccc314d269b1127fd4832bbe3 </h2> 
+
+
+
 <p>Troopers Stay es una aplicación Java que permite a los usuarios publicar y buscar alojamientos para estancias temporales. Los usuarios pueden registrarse, iniciar sesión y tener roles duales: publicar alojamientos o contratar servicios de alojamiento. La aplicación utiliza una base de datos MySQL para almacenar la información de los alojamientos y los usuarios.</p>
 
 <h2>Tecnologías utilizadas</h2>
